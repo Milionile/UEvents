@@ -1,0 +1,164 @@
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 20px; /* reduced padding for thinner header */
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Logo */
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #c31835;
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 999px; /* pill shape */
+    padding: 4px 10px;
+    height: 36px;
+    max-width: 400px;
+    flex: 1;
+    margin: 0 20px;
+}
+
+.search-container input {
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 6px 10px;
+    font-size: 14px;
+    flex: 1;
+    border-radius: 999px;
+    min-width: 100px;
+}
+
+/* Search Button */
+.search-button {
+    padding: 6px 12px;
+    border: none;
+    background-color: #c31835;
+    color: white;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #a6152e;
+}
+
+/* Navigation Menu */
+.menu {
+    display: flex;
+    gap: 15px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 8px;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #C8102E;
+}
+    
+.dropdown {
+    position: relative;  /* Keeps the dropdown anchored to its parent */
+    display: inline-block;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    min-width: 200px;
+    max-width: 250px; /* Prevents excessive width */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    top: 100%;  
+    left: 50%;  
+    transform: translateX(-50%); 
+    padding: 10px 0;
+    white-space: nowrap;
+    overflow: hidden; 
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+    color: #333;
+    text-decoration: none;
+    transition: background-color  0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f9f9f9;
+}
+#about{
+    position: relative;  
+    display: inline-block;
+}
+#about-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border-radius: 5px;
+    min-width: 200px;
+    max-width: 250px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    top: 100%;  
+    right: .0001%; 
+    padding: 10px 0;
+    white-space: nowrap; 
+    overflow: hidden; 
+}
+#about:hover #about-content {
+    display: block;
+}
+#about-content a {
+    padding: 12px 16px;
+    display: block;
+    color: #333;
+    text-decoration: none;
+    transition: background-color  0.3s ease;
+}
+#about-content a:hover {
+    background-color: #f9f9f9;
+}
+.breadcrumb {
+  font-size: 0.98rem;
+  margin-bottom: 18px;
+  color: #888;
+}
+.breadcrumb a {
+  color: #c31835;
+  text-decoration: none;
+}
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+.breadcrumb span {
+  color: #333;
+  font-weight: 500;
+}

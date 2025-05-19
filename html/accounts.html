@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounts</title>
+    <link rel="stylesheet" href="../css/accounts.css">
+</head>
+<body>
+<header>
+    <div class="logo"><a href="../index.html">UEvents</a></div>
+    <div class="search-container">
+      <input type="text" placeholder="Search events">
+    </div>
+    <nav>
+      <div>Browse Events</div>
+      <div style="color:#3659e3;">Create an event</div>
+    
+      <!-- Organize Dropdown -->
+      <div class="dropdown-wrapper">
+        <div class="dropdown">Organize</div>
+        <div class="dropdown-menu">
+          <a href="#">Create Event</a>
+          <a href="#">Pricing</a>
+          <a href="#">Resources</a>
+          <a href="#">Contact Sales</a>
+        </div>
+      </div>
+    
+      <!-- Help Dropdown -->
+      <div class="dropdown-wrapper">
+        <div class="dropdown">Help</div>
+        <div class="dropdown-menu">
+          <a href="#">Find your tickets</a>
+          <a href="#">Contact an event organizer</a>
+          <a href="#">Visit the help center</a>
+        </div>
+      </div>
+      
+      <!-- Account Dropdown -->
+      <div class="dropdown-wrapper">
+        <div class="profile">
+          <div class="profile-icon">👤</div>
+          <div style="color:#6f7287;">email@example.com ▾</div>
+        </div>
+        <div class="dropdown-menu account-menu">
+          <a href="#">Manage my events</a>
+          <div class="menu-separator"></div>
+          <a href="#">Tickets (0)</a>
+          <a href="#">Liked</a>
+          <a href="#">Following</a>
+          <a href="#">Interests</a>
+          <div class="menu-separator"></div>
+          <a href="#">Account settings</a>
+          <a href="#">Log out</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+<aside>
+    <div class="sidebar">
+        <a class="active" href="#userinfo">Contact Info</a>
+        <a href="#email">Change Email</a>
+        <a href="#password">Change Password</a>
+        <a href="#credit">Payment</a>
+        <a href="#Linked">Linked Accounts</a>
+        <a href="#EmailPreferences">Email Preferences</a>
+        <a href="#del">Close Account</a>
+        <a href="#PerData">Personal Data</a>
+      </div>
+</aside>   
+<main>
+    <h2 style="text-align: left; font-size: xx-large;">Account Info</h2>
+    <hr>
+    <section id="userinfo" class="content-section">
+        <h2>Contact Info</h2>
+        <form action="">
+          <div class="two-columns">
+            <div>
+              <label for="prefix">Prefix</label>
+              <select id="prefix" name="prefix">
+                  <option value="Mr." >Mr.</option>
+                  <option value="Mrs.">Mrs.</option>
+                  <option value="Ms.">Ms.</option>
+                  <option value="Mx">Mx</option>
+                  <option value="Dr.">Dr.</option>
+                  <option value="prof">Prof</option>
+                  <option value="rev">Rev.</option>
+              </select>
+              <label for="fname">First Name</label>
+              <input type="text" name="fname" id="fname" placeholder="First Name" required>
+              <label for="lname">Last name</label>
+              <input type="text" name="lname" id="lname" placeholder="Last Name" required>
+              <label for="suffix">Suffix</label>
+              <select name="suffix" id="suffix">
+                  <option value="Jr.">Jr.</option>
+                  <option value="Sr.">Sr.</option>
+                  <option value="II">II</option>
+                  <option value="III">III</option>
+                  <option value="IV">IV</option>
+                  <option value="V">V</option>
+              </select>
+              <label for="social">Social/Page URL</label>
+              <input type="url" name="social" id="social" placeholder="Page url">
+            </div>
+            <div>
+              <label for="hphone">Home Phone</label>
+              <input type="tel" name="hphone" id="hphone" placeholder="Home Phone" size="20" minlength="9" maxlength="14" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+              <label for="cphone">Cell Phone</label>
+              <input type="tel" name="cphone" id="cphone" placeholder="Cell Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" size="20" minlength="9" maxlength="14" required>
+              <label for="job">Job Title</label>
+              <input type="text" name="job" id="job">
+              <label for="org">Company/Organization</label>
+              <input type="text" name="org" id="org">
+              <label for="website">Website</label>
+              <input type="url" name="website" id="website" placeholder="https://example.com">
+            </div>
+          </div>
+
+          <h2>Home Address</h2>
+          <div class="two-columns">
+            <div>
+              <label for="address">Address</label>
+              <input type="text" name="address" id="address" placeholder="Address">
+              <label for="city">City</label>
+              <input type="text" name="city" id="city" placeholder="City">
+              <label for="zip">Zip Code</label>
+              <input type="text" name="zip" id="zip" placeholder="Zip Code">
+            </div>
+            <div>
+              <label for="address2">2nd Address</label>
+              <input type="text" name="address2" id="address2" placeholder="Address">
+              <label for="country">Country</label>
+              <input type="text" name="country" id="country" placeholder="Country">
+            </div>
+          </div>
+
+          <h2>Shipping Address</h2>
+          <div class="two-columns">
+            <div>
+              <label for="shipping_address">Address</label>
+              <input type="text" name="shipping_address" id="shipping_address" placeholder="Address">
+              <label for="shipping_city">City</label>
+              <input type="text" name="shipping_city" id="shipping_city" placeholder="City">
+              <label for="shipping_zip">Zip Code</label>
+              <input type="text" name="shipping_zip" id="shipping_zip" placeholder="Zip Code">
+            </div>
+            <div>
+              <label for="shipping_address2">2nd Address</label>
+              <input type="text" name="shipping_address2" id="shipping_address2" placeholder="Address">
+              <label for="shipping_country">Country</label>
+              <input type="text" name="shipping_country" id="shipping_country" placeholder="Country">
+            </div>
+          </div>
+
+          <h2>Work Address</h2>
+          <div class="two-columns">
+            <div>
+              <label for="work_address">Address</label>
+              <input type="text" name="work_address" id="work_address" placeholder="Address">
+              <label for="work_city">City</label>
+              <input type="text" name="work_city" id="work_city" placeholder="City">
+              <label for="work_zip">Zip Code</label>
+              <input type="text" name="work_zip" id="work_zip" placeholder="Zip Code">
+            </div>
+            <div>
+              <label for="work_address2">2nd Address</label>
+              <input type="text" name="work_address2" id="work_address2" placeholder="Address">
+              <label for="work_country">Country</label>
+              <input type="text" name="work_country" id="work_country" placeholder="Country">
+            </div>
+          </div>
+
+          <input type="submit" name="submit" id="submit" value="Save Changes" class="submit-button">
+          <input type="reset" name="reset" id="reset" value="Reset" class="reset-button"><br>
+        </form>
+    </section>
+    
+</main>
+</body>
+</html>

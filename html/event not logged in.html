@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Details</title>
+  <link rel="stylesheet" href="../css/events notlgged in.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="../index.html">UEvents</a></div>
+      <div class="search-container">
+        <input type="text" placeholder="Search events" />
+        <input type="text" placeholder="Search Location" />
+        <button class="search-button">Search</button>
+      </div>
+      <div class="menu">
+        <div class="dropdown">
+          <a href="html/services.html">Our Services</a>
+          <div class="dropdown-content">
+            <a href="html/event.html">Events</a>
+            <a href="Create.html">Create Events</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="html/tickets.html">My Tickets</a>
+          <div class="dropdown-content">
+            <a href="html/tickets.html">Tickets</a>
+            <a href="cart.html">Purchase Tickets</a>
+          </div>
+        </div>
+      
+        <div class="dropdown">
+          <a href="html/help.html">Help Center</a>
+          <div class="dropdown-content">
+            <a href="html/help.html">Help Center</a>
+            <a href="FAQ.html">FAQs</a>
+            <a href="contactorg.html">Contact Event Organizers</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="info.html">About Us</a>
+          <div class="dropdown-content">
+            <a href="Info.html">Who We Are</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="PTS.html">Privacy and Terms</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="#">My Account</a>
+          <div class="dropdown-content">
+            <a href="#" id="openSignup">Sign Up</a>
+            <a href="#" id="openLogin">Login</a> 
+          </div>
+        </div>
+        
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    
+
+<div id="loginModal" class="modal">
+  <form id="loginForm" class="modal-content" method="post">
+    <div class="container">
+      <span class="close" id="closeLogin">X</span>
+      <h2 style="color: #c31835;">Login</h2>
+      <p>Please enter your credentials to log in.</p>
+      <hr>
+
+      <label for="login-email"><b>Email</b></label>
+      <input type="email" placeholder="Enter Email" name="login-email" required>
+
+      <label for="login-psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="login-psw" required>
+
+      <div class="clearfix">
+        <button type="submit" class="signupbtn">Login</button>
+        <button type="button" class="cancelbtn">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>
+<div id="signupModal" class="modal">
+  <form id="signupForm" class="modal-content" method="post">
+    <div class="container">
+      <span class="close" id="closeSignup">X</span>
+      <h2 style="color: #c31835;">Sign Up</h2>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+
+      <label for="signup-name"><b>Full Name</b></label>
+      <input type="text" placeholder="Enter Full Name" name="signup-name" required >
+
+      <label for="signup-email"><b>Email</b></label>
+      <input type="email" placeholder="Enter Email" name="signup-email" required>
+
+      <label for="signup-psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="signup-psw" required>
+
+      <label for="signup-psw-repeat"><b>Confirm Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="signup-psw-repeat" required>
+
+      <div class="clearfix">
+        <button type="submit" class="signupbtn">Sign Up</button>
+        <button type="button" class="cancelbtn">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>
+  <div class="event-layout">
+    <div class="event-left">
+      <div class="event-hero">
+        <img id="event-image" class="event-image" src="" alt="">
+      </div>
+      <div class="event-header">
+        <span class="event-badge">Sales end soon</span>
+        <div class="event-date-main" id="event-date-main"></div>
+        <h1 class="event-title" id="event-title"></h1>
+        <div class="event-description" id="event-description"></div>
+        <div class="event-organizer">
+          <span>By <b id="event-organizer"></b></span>
+          <button class="follow-btn">Follow</button>
+        </div>
+      </div>
+    </div>
+    <div class="event-right">
+      <div class="ticket-box">
+        <div class="ticket-type">
+          <span>General Admission</span>
+          <span class="ticket-price" id="ticket-price"></span>
+        </div>
+        <div class="ticket-controls">
+          <button onclick="updateCount(-1)">−</button>
+          <input type="text" id="ticketCount" value="1" readonly>
+          <button onclick="updateCount(1)">+</button>
+        </div>
+        <div class="ticket-fee" id="ticket-fee"></div>
+        <a class="checkout-btn" href="#" id="checkout-btn"></a>
+        <div class="ticket-fee-note">* Includes 5% service fee</div>
+      </div>
+    </div>
+  </div>
+  </main>
+  <footer>
+    
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 UEvents. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="PTS.html">Privacy & Terms</a>
+        <a href="contact.html">Contact</a>
+        <a href="FAQ.html">FAQs</a>
+      </div>
+    </div>
+  </footer>
+  </footer>
+  <script src="../js/event not loggedin.js"></script>
+</body>
+</html>

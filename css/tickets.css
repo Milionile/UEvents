@@ -305,6 +305,58 @@ a {
     background-color: #e6e6e6;
     margin: 6px 0;
   }
+
+  .event-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #fdfdfd;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 15px;
+    width: 280px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 460px; /* Ensures uniform height */
+    box-sizing: border-box;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+}
+
+.event-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.event-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0 5px;
+}
+.event-card p {
+    font-size: 14px;
+    color: #666;
+    text-align: left;
+    line-height: 1.4;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;  /* Show only 3 lines */
+    line-clamp: 3;          /* Standard property for compatibility */
+    -webkit-box-orient: vertical;
+}
+
+#orders-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Responsive Navbar and Menu */
 @media (max-width: 900px) {
   .navbar {

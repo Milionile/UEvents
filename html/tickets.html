@@ -20,14 +20,13 @@
         <div class="dropdown">
           <a href="services.html">Our Services</a>
           <div class="dropdown-content">
-            <a href="events.html">Events</a>
+            <a href="event.html">Events</a>
             <a href="Create.html">Create Events</a>
           </div>
         </div>
         <div class="dropdown">
-          <a href="../html/tickets.html">My Tickets</a>
+          <a href="tickets.html">My Tickets</a>
           <div class="dropdown-content">
-            <a href="tickets.html">Tickets</a>
             <a href="cart.html">Purchase Tickets</a>
           </div>
         </div>
@@ -35,7 +34,6 @@
         <div class="dropdown">
           <a href="help.html">Help Center</a>
           <div class="dropdown-content">
-            <a href="help.html">Help Center</a>
             <a href="FAQ.html">FAQs</a>
             <a href="contactorg.html">Contact Event Organizers</a>
           </div>
@@ -43,7 +41,6 @@
         <div class="dropdown">
           <a href="info.html">About Us</a>
           <div class="dropdown-content">
-            <a href="Info.html">Who We Are</a>
             <a href="contact.html">Contact Us</a>
             <a href="PTS.html">Privacy and Terms</a>
           </div>
@@ -79,17 +76,21 @@
 
   <div class="orders-section">
     <h2>Orders</h2>
-    <div class="empty-orders">
-      <div style="width: 80px; height: 80px; margin-bottom: 12px;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#6f7287" width="80" height="80">
-          <path d="M20 4H4c-1.1 0-2 .9-2 2v3c.83 0 1.5.67 1.5 1.5S2.83 12 2 12v3c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-3c-.83 0-1.5-.67-1.5-1.5S21.17 9 22 9V6c0-1.1-.9-2-2-2zm-3 10H7v-4h10v4z"/>
-        </svg>
+    <div id="orders-container">
+      <div class="empty-orders">
+        <div style="width: 80px; height: 80px; margin-bottom: 12px;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#6f7287" width="80" height="80">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v3c.83 0 1.5.67 1.5 1.5S2.83 12 2 12v3c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-3c-.83 0-1.5-.67-1.5-1.5S21.17 9 22 9V6c0-1.1-.9-2-2-2zm-3 10H7v-4h10v4z"/>
+          </svg>
+        </div>
+        <div>No upcoming orders</div>
+        <a href="#">See past orders</a>
       </div>
-      <div>No upcoming orders</div>
-      <a href="#">See past orders</a>
     </div>
   </div>
 </main>
 
+<script src="../js/event-data.js"></script>
+<script src="../js/tickets.js"></script>
 </body>
 </html>

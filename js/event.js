@@ -271,6 +271,7 @@ if (event) {
   document.getElementById('ticket-price').textContent = `₱${event.price.toFixed(2)}`;
   document.getElementById('ticket-fee').textContent = `+₱${(event.price * 0.05).toFixed(2)} Fee`;
   document.getElementById('checkout-btn').textContent = `Check out for ₱${(event.price * 1.05).toFixed(2)}`;
+  document.getElementById('checkout-btn').href = `tickets.html?id=${event.id}&tickets=${document.getElementById("ticketCount").value}`;
 }
 
 window.updateCount = function(change) {
@@ -279,8 +280,9 @@ window.updateCount = function(change) {
   value = Math.max(1, value + change);
   input.value = value;
   if (event) {
-    document.getElementById('checkout-btn').textContent =
-      `Check out for ₱${(event.price * value * 1.05).toFixed(2)}`;
+    const checkoutBtn = document.getElementById('checkout-btn');
+    checkoutBtn.textContent = `Check out for ₱${(event.price * value * 1.05).toFixed(2)}`;
+    checkoutBtn.href = `tickets.html?id=${event.id}&tickets=${value}`;
     document.getElementById('ticket-fee').textContent =
       `+₱${(event.price * value * 0.05).toFixed(2)} Fee`;
   }

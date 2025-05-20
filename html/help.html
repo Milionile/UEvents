@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>UEvents Help Center</title>
+  <link rel="stylesheet" href="../css/index.css" />
   <link rel="stylesheet" href="../css/help.css" />
 </head>
 <body>
@@ -11,11 +12,47 @@
 
   <header>
     <nav class="navbar">
-      <div class="logo">UEvents</div>
-      
+      <div class="logo"><a href="../index.html">UEvents</a></div>
+      <div class="search-container">
+        <input type="text" placeholder="Search events" />
+        <input type="text" placeholder="Search Location" />
+        <button class="search-button">Search</button>
+      </div>
       <div class="menu">
         <div class="dropdown">
-          <a href="index.html">Home</a>  
+          <a href="services.html">Our Services</a>
+          <div class="dropdown-content">
+            <a href="event.html">Events</a>
+            <a href="Create.html">Create Events</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="tickets.html">My Tickets</a>
+          <div class="dropdown-content">
+            <a href="cart.html">Purchase Tickets</a>
+          </div>
+        </div>
+      
+        <div class="dropdown">
+          <a href="help.html">Help Center</a>
+          <div class="dropdown-content">
+            <a href="FAQ.html">FAQs</a>
+            <a href="contactorg.html">Contact Event Organizers</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a href="info.html">About Us</a>
+          <div class="dropdown-content">
+            <a href="contact.html">Contact Us</a>
+            <a href="PTS.html">Privacy and Terms</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <a>Account</a>
+          <div class="dropdown-content">
+            <a href="#" id="openSignup">Sign Up</a>
+            <a href="#" id="openLogin">Login</a> 
+          </div>
         </div>
         
       </div>
@@ -27,7 +64,7 @@
       <h1>Help Center</h1>
       <p>How can we help?</p>
 
-      <div class="search-container">
+      <div class="help-search-container">
         <input type="text" placeholder="Search help articles" />
       </div>
        

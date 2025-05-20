@@ -74,6 +74,12 @@ body {
     background-color: #a6152e;
 }
 
+.menu-separator {
+  height: 1px;
+  background-color: #e6e6e6;
+  margin: 6px 0;
+}
+
 /* Navigation Menu */
 .menu {
     display: flex;

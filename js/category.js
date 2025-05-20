@@ -25,7 +25,7 @@ if (filteredEvents.length === 0) {
       <p>${event.description}</p>
       <p><strong>Date:</strong> ${event.date}</p>
       <p><strong>Location:</strong> ${event.location}</p>
-      <p><strong>Price:</strong> ${event.price === 0 ? "Free!" : "PHP " + event.price.toLocaleString()}</p>
+      <p><strong>Price:</strong> ${event.price === 0 ? "Free!" : "₱" + event.price.toLocaleString() + ".00"}</p>
       <p><strong>Organizer:</strong> ${event.organizer}</p>
       <button class="cta-button" onclick="window.location.href='event.html?id=${event.id}'">Learn More</button>
     </div>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Event Details</title>
-  <link rel="stylesheet" href="../css/events.css" />
+  <link rel="stylesheet" href="../css/events.css">
 </head>
 <body>
   <header>
@@ -61,7 +61,7 @@
               <a href="#">Interests</a>
               <div class="menu-separator"></div>
               <a href="accounts.html">Account settings</a>
-              <a href="index.html">Log out</a>
+              <a href="../index.html">Log out</a>
             </div>
           </div>
         </div>
@@ -103,9 +103,25 @@
     </div>
   </div>
   </main>
-  <footer>
-    <!-- Your footer here -->
-  </footer>
+
+  <!-- Modals for purchase confirmation and thank you -->
+  <div id="confirmModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <h2>Confirm Purchase</h2>
+      <p>Are you sure you want to buy <span id="modal-ticket-count"></span> ticket(s) for <b id="modal-event-title"></b>?</p>
+      <p>Total: <b id="modal-total"></b></p>
+      <button id="confirmPurchaseBtn" class="submit-button">Yes, Buy Ticket</button>
+      <button onclick="closeModal('confirmModal')" class="reset-button">Cancel</button>
+    </div>
+  </div>
+  <div id="thankYouModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <h2>Thank You!</h2>
+      <p>Your ticket purchase was successful.</p>
+      <button onclick="closeModal('thankYouModal')" class="submit-button">Close</button>
+    </div>
+  </div>
+
   <script src="../js/event.js"></script>
 </body>
 </html>

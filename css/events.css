@@ -891,6 +891,90 @@ hr {
   text-align: center;
 }
 @media (max-width: 900px) {
+  .container, .event-main-info, .event-header {
+    max-width: 100%;
+    padding: 16px 8px;
+  }
+  .event-layout {
+    flex-direction: column;
+    gap: 0;
+  }
+  .event-right {
+    position: static;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 32px;
+  }
+  .event-card {
+    width: 90vw;
+    min-width: 0;
+  }
+  .slider-container {
+    max-width: 100vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar, .menu, .categories-container, .footer-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+  .navbar {
+    padding: 8px 6px;
+  }
+  .logo {
+    font-size: 18px;
+  }
+  .container h1 {
+    font-size: 2rem;
+  }
+  .container, .event-main-info, .event-header {
+    padding: 10px 2vw;
+  }
+  .event-title {
+    font-size: 1.3rem;
+  }
+  .event-card {
+    width: 98vw;
+    min-width: 0;
+    padding: 10px 4px;
+  }
+  .slide img, .event-image {
+    height: 180px;
+    min-height: 120px;
+  }
+  .ticket-box {
+    max-width: 100%;
+    padding: 12px 6px;
+  }
+  .checkout-btn {
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+  .newsletter input[type="email"] {
+    width: 90vw;
+    min-width: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .container h1 {
+    font-size: 1.1rem;
+  }
+  .event-title {
+    font-size: 1rem;
+  }
+  .event-card {
+    padding: 6px 2px;
+  }
+  .ticket-controls button, .ticket-controls input {
+    width: 24px;
+    height: 24px;
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 900px) {
   .event-layout {
     flex-direction: column;
     gap: 0;

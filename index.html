@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>UEvents - Event Marketplace</title>
-  <link rel="stylesheet" href="css/index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UEvents - Event Navigation</title>
+  <link rel="stylesheet" href="css/index.css" />
 </head>
 <body>
+
+
   <header>
     <nav class="navbar">
       <div class="logo">UEvents</div>
-      <form class="search-container">
-        <input type="text" placeholder="Search events">
-        <input type="text" placeholder="Search Location">
-        <button type="submit" class="search-button">Search</button>
-      </form>
+      <div class="search-container">
+        <input type="text" placeholder="Search events" />
+        <input type="text" placeholder="Search Location" />
+        <button class="search-button">Search</button>
+      </div>
       <div class="menu">
         <div class="dropdown">
-          <a>Our Services</a>
+          <a href="html/services.html">Our Services</a>
           <div class="dropdown-content">
-            <a href="html/event not logged in.html">Events</a>
+            <a href="html/event.html">Events</a>
             <a href="Create.html">Create Events</a>
           </div>
         </div>
         <div class="dropdown">
           <a href="html/tickets.html">My Tickets</a>
           <div class="dropdown-content">
+            <a href="html/tickets.html">Tickets</a>
             <a href="cart.html">Purchase Tickets</a>
           </div>
         </div>
@@ -33,6 +36,7 @@
         <div class="dropdown">
           <a href="html/help.html">Help Center</a>
           <div class="dropdown-content">
+            <a href="html/help.html">Help Center</a>
             <a href="FAQ.html">FAQs</a>
             <a href="contactorg.html">Contact Event Organizers</a>
           </div>
@@ -40,12 +44,13 @@
         <div class="dropdown">
           <a href="info.html">About Us</a>
           <div class="dropdown-content">
+            <a href="Info.html">Who We Are</a>
             <a href="contact.html">Contact Us</a>
             <a href="PTS.html">Privacy and Terms</a>
           </div>
         </div>
         <div class="dropdown">
-          <a href="#">Account</a>
+          <a href="#">My Account</a>
           <div class="dropdown-content">
             <a href="#" id="openSignup">Sign Up</a>
             <a href="#" id="openLogin">Login</a> 
@@ -125,15 +130,55 @@
 
       <h1 style="font-size: 30px;">Categories</h1>
       <div class="categories-container">
-        <div class="category-item"><img src="icon/music.svg" alt="Music"><p>Music</p></div>
-        <div class="category-item"><img src="icon/night-life.svg" alt="Nightlife"><p>Nightlife</p></div>
-        <div class="category-item"><img src="icon/performing-arts.svg" alt="Performing & Visual Arts"><p>Performing & Visual Arts</p></div>
-        <div class="category-item"><img src="icon/holidat.svg" alt="Holidays"><p>Holidays</p></div>
-        <div class="category-item"><img src="icon/dating.svg" alt="Dating"><p>Dating</p></div>
-        <div class="category-item"><img src="icon/hobbies.svg" alt="Hobbies"><p>Hobbies</p></div>
-        <div class="category-item"><img src="icon/business.svg" alt="Business"><p>Business</p></div>
-        <div class="category-item"><img src="icon/food.svg" alt="Food & Drink"><p>Food & Drink</p></div>
-      </div>
+  <a href="html/category.html?cat=Music">
+    <div class="category-item">
+      <img src="icon/music.svg" alt="Music">
+      <p>Music</p>
+    </div>
+  </a>
+  <a href="html/category.html?cat=Nightlife">
+    <div class="category-item">
+      <img src="icon/night-life.svg" alt="Nightlife">
+      <p>Nightlife</p>
+    </div>
+  </a>
+  <a href="html/category.html?cat=Performing%20%26%20Visual%20Arts">
+    <div class="category-item">
+      <img src="icon/performing-arts.svg" alt="Performing & Visual Arts">
+      <p>Performing & Visual Arts</p>
+    </div>
+  </a>
+  <a href="html/category.html?cat=Holidays">
+    <div class="category-item">
+      <img src="icon/holidat.svg" alt="Holidays">
+      <p>Holidays</p>
+    </div>
+  </a>
+  <a href="html/category.html?cat=Dating">
+    <div class="category-item">
+      <img src="icon/dating.svg" alt="Dating">
+      <p>Dating</p>
+    </div>
+  </a>
+  <a href="html/category.html?cat=Hobbies">
+    <div class="category-item">
+      <img src="icon/hobbies.svg" alt="Hobbies">
+      <p>Hobbies</p>
+    </div>
+  </a>
+  <a href="html/category.html?cat=Business">
+    <div class="category-item">
+      <img src="icon/business.svg" alt="Business">
+      <p>Business</p>
+    </div>
+  </a>
+  <a href="html/category.html?cat=Food%20%26%20Drink">
+    <div class="category-item">
+      <img src="icon/food.svg" alt="Food & Drink">
+      <p>Food & Drink</p>
+    </div>
+  </a>
+</div>
       <section class="featured-events">
         <h2>Featured Events</h2>
         <div class="event-list horizontal-scroll">

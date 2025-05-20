@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UEvents</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="page-title">Category Events | UEvents</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <script src="../js/event-data.js"></script>
 </head>
 <body>
-   
   <header>
     <nav class="navbar">
-      <div class="logo">UEvents</div>
+      <div class="logo"><a href="../index.html">UEvents</a></div>
       <div class="search-container">
         <input type="text" placeholder="Search events" />
         <input type="text" placeholder="Search Location" />
@@ -30,7 +31,6 @@
             <a href="cart.html">Purchase Tickets</a>
           </div>
         </div>
-      
         <div class="dropdown">
           <a href="help.html">Help Center</a>
           <div class="dropdown-content">
@@ -47,34 +47,36 @@
             <a href="PTS.html">Privacy and Terms</a>
           </div>
         </div>
-          <div class="dropdown-wrapper">
-            <div class="profile">
-              <div class="profile-icon">👤</div>
-              <div style="color:#6f7287;">email@example.com ▾</div>
-            </div>
-            <div class="dropdown-menu account-menu">
-              <a href="#">Manage my events</a>
-              <div class="menu-separator"></div>
-              <a href="tickets.html">Tickets (0)</a>
-              <a href="#">Liked</a>
-              <a href="#">Following</a>
-              <a href="#">Interests</a>
-              <div class="menu-separator"></div>
-              <a href="html/accounts.html">Account settings</a>
-              <a href="../index.html">Log out</a>
-            </div>
+        <div class="dropdown">
+          <a href="#">My Account</a>
+          <div class="dropdown-content">
+            <a href="#" id="openSignup">Sign Up</a>
+            <a href="#" id="openLogin">Login</a>
           </div>
         </div>
+      </div>
     </nav>
   </header>
+
   <main>
-  <nav class="breadcrumb">
-    <a href="../index.html">Home</a> &gt;
-    <a href="Create.html">Create Event</a> &gt;
-    <span>Why Choose Us</span>
-  </nav>
-  <h1>Why choose us for your events</h1>
-  <h5>Event organizing and hosting made easy, for you, and for everyone</h5>
-</main>
+    <div class="container">
+      <nav class="breadcrumb" id="breadcrumb"></nav>
+      <h1 id="category-title"></h1>
+      <p id="category-desc"></p>
+      <div class="event-list" id="event-list"></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 UEvents. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="PTS.html">Privacy & Terms</a>
+        <a href="contact.html">Contact</a>
+        <a href="FAQ.html">FAQs</a>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/category.js"></script>
 </body>
 </html>

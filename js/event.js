@@ -174,6 +174,84 @@ const events = [
 },
 
 
+  {
+    id: "21",
+    title: "Manila Night Bash",
+    image: "../Pictures/nightlife1.jpg",
+    description: "Dance the night away with top DJs and a vibrant crowd.",
+    price: 1000,
+    organizer: "PartyLife PH",
+    date: "2025-06-10",
+    location: "Manila, Philippines",
+    category: "Nightlife"
+  },
+  {
+    id: "31",
+    title: "Broadway in Manila",
+    image: "../Pictures/performing-arts1.jpg",
+    description: "A night of world-class musical performances.",
+    price: 2500,
+    organizer: "StageWorks",
+    date: "2025-07-01",
+    location: "Cultural Center of the Philippines",
+    category: "Performing & Visual Arts"
+  },
+  {
+    id: "41",
+    title: "Christmas Market Festival",
+    image: "../Pictures/holidays1.jpg",
+    description: "Celebrate the holidays with food, music, and gifts.",
+    price: 0,
+    organizer: "Holiday Events PH",
+    date: "2025-12-15",
+    location: "Bonifacio High Street",
+    category: "Holidays"
+  },
+  {
+    id: "51",
+    title: "Singles Mixer Night",
+    image: "../Pictures/dating1.jpg",
+    description: "Meet new people and maybe find your match!",
+    price: 500,
+    organizer: "LoveConnect",
+    date: "2025-06-20",
+    location: "Makati, Philippines",
+    category: "Dating"
+  },
+  {
+    id: "61",
+    title: "DIY Crafting Workshop",
+    image: "../Pictures/hobbies1.jpg",
+    description: "Unleash your creativity with hands-on crafting.",
+    price: 300,
+    organizer: "CraftyHands",
+    date: "2025-07-10",
+    location: "Quezon City",
+    category: "Hobbies"
+  },
+  {
+    id: "71",
+    title: "Startup Summit 2025",
+    image: "../Pictures/business1.jpg",
+    description: "Where innovation meets opportunity. Meet top tech founders.",
+    price: 1200,
+    organizer: "InnovateNow PH",
+    date: "2025-09-05",
+    location: "Cebu, Philippines",
+    category: "Business"
+  },
+  {
+    id: "81",
+    title: "Food & Drink Expo",
+    image: "../Pictures/food1.jpg",
+    description: "Taste the best food and drinks from around the world.",
+    price: 200,
+    organizer: "Foodies United",
+    date: "2025-08-15",
+    location: "SMX Convention Center",
+    category: "Food & Drink"
+  },
+
 ];
 
 // Get event ID from URL

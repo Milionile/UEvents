@@ -904,3 +904,154 @@ hr {
     margin-top: 32px;
   }
 }
+
+/* Responsive Event Main Info */
+@media (max-width: 700px) {
+  .event-main-info {
+    padding: 16px 6px;
+    max-width: 100vw;
+  }
+  .event-header {
+    padding: 16px 8px 10px 8px;
+  }
+  .event-title {
+    font-size: 1.3rem;
+  }
+  .event-date-main {
+    font-size: 1rem;
+  }
+  .event-description {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive Event Image */
+@media (max-width: 700px) {
+  .event-image {
+    max-height: 180px;
+    border-radius: 8px;
+  }
+}
+
+/* Responsive Ticket Box */
+@media (max-width: 700px) {
+  .ticket-box {
+    padding: 14px 6px;
+    max-width: 100%;
+    font-size: 0.98rem;
+  }
+  .ticket-type {
+    font-size: 1rem;
+  }
+  .checkout-btn {
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+}
+
+/* Responsive Organizer and Buttons */
+@media (max-width: 600px) {
+  .event-organizer {
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start;
+  }
+  .follow-btn {
+    width: 100%;
+    padding: 8px 0;
+  }
+}
+
+/* Responsive Navbar and Menu */
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 8px;
+  }
+  .menu {
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .search-container {
+    margin: 10px 0;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Responsive Footer */
+@media (max-width: 700px) {
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+  }
+}
+
+/* General: Prevent horizontal scroll */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* Responsive Ticket Box and Controls */
+@media (max-width: 500px) {
+  .ticket-box {
+    padding: 10px 2vw;
+    max-width: 100vw;
+    min-width: 0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+  }
+  .ticket-type {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    font-size: 0.98rem;
+  }
+  .ticket-controls {
+    gap: 4px;
+    margin-bottom: 8px;
+  }
+  .ticket-controls button {
+    width: 28px;
+    height: 28px;
+    font-size: 1rem;
+    padding: 0;
+  }
+  .ticket-controls input {
+    width: 32px;
+    font-size: 0.95rem;
+    padding: 2px 0;
+  }
+  .checkout-btn {
+    font-size: 0.98rem;
+    padding: 8px 0;
+    border-radius: 6px;
+    margin-top: 8px;
+  }
+  .ticket-fee,
+  .ticket-fee-note {
+    font-size: 0.9rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 350px) {
+  .ticket-box {
+    padding: 6px 1vw;
+  }
+  .ticket-controls button {
+    width: 22px;
+    height: 22px;
+    font-size: 0.9rem;
+  }
+  .ticket-controls input {
+    width: 22px;
+    font-size: 0.85rem;
+  }
+}

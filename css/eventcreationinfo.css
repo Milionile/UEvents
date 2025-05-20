@@ -40,7 +40,6 @@
     min-width: 100px;
 }
 
-
 footer {
     background-color: #1e1e1e;
     color: #eee;
@@ -63,7 +62,9 @@ footer {
 
 .footer-links a:hover {
     color: #fff;
-} .modal-content input[type=text],
+}
+
+.modal-content input[type=text],
 .modal-content input[type=email],
 .modal-content input[type=password] {
   width: 100%;
@@ -75,6 +76,7 @@ footer {
   border-radius: 5px;
   display: inline-block;
 }
+
 /* Search Button */
 .search-button {
     padding: 6px 12px;

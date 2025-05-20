@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UEvents</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Details</title>
+  <link rel="stylesheet" href="../css/events.css">
 </head>
 <body>
-   
   <header>
     <nav class="navbar">
-      <div class="logo">UEvents</div>
+      <div class="logo"><a href="indexlogedin.html">UEvents</a></div>
       <div class="search-container">
-        <input type="text" placeholder="Search events" />
-        <input type="text" placeholder="Search Location" />
+        <input type="text" placeholder="Search events">
+        <input type="text" placeholder="Search Location">
         <button class="search-button">Search</button>
       </div>
       <div class="menu">
@@ -60,31 +60,52 @@
               <a href="#">Following</a>
               <a href="#">Interests</a>
               <div class="menu-separator"></div>
-              <a href="html/accounts.html">Account settings</a>
+              <a href="accounts.html">Account settings</a>
               <a href="../index.html">Log out</a>
             </div>
           </div>
         </div>
+        
     </nav>
   </header>
   <main>
-  <nav class="breadcrumb">
-    <a href="../index.html">Home</a> &gt;
-    <a href="Create.html">Create Event</a> &gt;
-    <span>Why Choose Us</span>
-  </nav>
-  <h1>Why choose us for your events</h1>
-  <h5>Event organizing and hosting made easy, for you, and for everyone</h5>
-</main>
-  <footer>
-    <div class="footer-content">
-      <p>&copy; 2025 UEvents. All rights reserved.</p>
-      <div class="footer-links">
-        <a href="PTS.html">Privacy & Terms</a>
-        <a href="contact.html">Contact</a>
-        <a href="FAQ.html">FAQs</a>
+  <div class="event-layout">
+    <div class="event-left">
+      <div class="event-hero">
+        <img id="event-image" class="event-image" src="" alt="">
+      </div>
+      <div class="event-header">
+        <span class="event-badge">Sales end soon</span>
+        <div class="event-date-main" id="event-date-main"></div>
+        <h1 class="event-title" id="event-title"></h1>
+        <div class="event-description" id="event-description"></div>
+        <div class="event-organizer">
+          <span>By <b id="event-organizer"></b></span>
+          <button class="follow-btn">Follow</button>
+        </div>
       </div>
     </div>
+    <div class="event-right">
+      <div class="ticket-box">
+        <div class="ticket-type">
+          <span>General Admission</span>
+          <span class="ticket-price" id="ticket-price"></span>
+        </div>
+        <div class="ticket-controls">
+          <button onclick="updateCount(-1)">−</button>
+          <input type="text" id="ticketCount" value="1" readonly>
+          <button onclick="updateCount(1)">+</button>
+        </div>
+        <div class="ticket-fee" id="ticket-fee"></div>
+        <a class="checkout-btn" href="#" id="checkout-btn"></a>
+        <div class="ticket-fee-note">* Includes 5% service fee</div>
+      </div>
+    </div>
+  </div>
+  </main>
+  <footer>
+    <!-- Your footer here -->
   </footer>
+  <script src="../js/event.js"></script>
 </body>
 </html>

@@ -15,7 +15,6 @@
     <nav>
       <div>Browse Events</div>
       <div style="color:#3659e3;">Create an event</div>
-    
       <!-- Organize Dropdown -->
       <div class="dropdown-wrapper">
         <div class="dropdown">Organize</div>
@@ -26,7 +25,6 @@
           <a href="#">Contact Sales</a>
         </div>
       </div>
-    
       <!-- Help Dropdown -->
       <div class="dropdown-wrapper">
         <div class="dropdown">Help</div>
@@ -36,7 +34,6 @@
           <a href="#">Visit the help center</a>
         </div>
       </div>
-      
       <!-- Account Dropdown -->
       <div class="dropdown-wrapper">
         <div class="profile">
@@ -56,8 +53,7 @@
         </div>
       </div>
     </nav>
-  </header>
-  
+</header>
 <aside>
     <div class="sidebar">
         <a class="active" href="#userinfo">Contact Info</a>
@@ -68,11 +64,13 @@
         <a href="#EmailPreferences">Email Preferences</a>
         <a href="#del">Close Account</a>
         <a href="#PerData">Personal Data</a>
-      </div>
-</aside>   
+    </div>
+</aside>
 <main>
-    <h2 style="text-align: left; font-size: xx-large;">Account Info</h2>
-    <hr>
+    <nav class="breadcrumb">
+      <a href="../index.html">Home</a> &gt;
+      <span>Account</span>
+    </nav>
     <section id="userinfo" class="content-section">
         <h2>Contact Info</h2>
         <form action="">
@@ -176,7 +174,92 @@
           <input type="reset" name="reset" id="reset" value="Reset" class="reset-button"><br>
         </form>
     </section>
-    
+    <section id="email" class="content-section">
+        <h2>Change Email</h2>
+        <form>
+            <label for="current-email">Current Email</label>
+            <input type="email" id="current-email" name="current-email" value="email@example.com" disabled>
+            <label for="new-email">New Email</label>
+            <input type="email" id="new-email" name="new-email" placeholder="Enter new email" required>
+            <input type="submit" value="Update Email" class="submit-button">
+        </form>
+    </section>
+    <section id="password" class="content-section">
+        <h2>Change Password</h2>
+        <form>
+            <label for="current-password">Current Password</label>
+            <input type="password" id="current-password" name="current-password" required>
+            <label for="new-password">New Password</label>
+            <input type="password" id="new-password" name="new-password" required>
+            <label for="confirm-password">Confirm New Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            <input type="submit" value="Update Password" class="submit-button">
+        </form>
+    </section>
+    <section id="credit" class="content-section">
+        <h2>Payment</h2>
+        <form>
+            <label for="card-number">Credit Card Number</label>
+            <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" maxlength="19">
+            <label for="expiry">Expiry Date</label>
+            <input type="text" id="expiry" name="expiry" placeholder="MM/YY" maxlength="5">
+            <label for="cvv">CVV</label>
+            <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4">
+            <input type="submit" value="Save Payment Method" class="submit-button">
+        </form>
+    </section>
+    <section id="Linked" class="content-section">
+        <h2>Linked Accounts</h2>
+        <p>Connect your social accounts for easier login and sharing:</p>
+        <button class="social-btn">Link Google</button>
+        <button class="social-btn">Link Facebook</button>
+        <button class="social-btn">Link Twitter</button>
+    </section>
+    <section id="EmailPreferences" class="content-section">
+        <h2>Email Preferences</h2>
+        <form>
+            <label><input type="checkbox" name="newsletter" checked> Receive newsletter and updates</label><br>
+            <label><input type="checkbox" name="reminders"> Event reminders</label><br>
+            <label><input type="checkbox" name="offers"> Special offers and promotions</label><br>
+            <input type="submit" value="Save Preferences" class="submit-button">
+        </form>
+    </section>
+    <section id="del" class="content-section">
+        <h2>Close Account</h2>
+        <p>If you wish to close your account, please confirm below. This action is irreversible.</p>
+        <form>
+            <label><input type="checkbox" required> I understand that closing my account is permanent.</label><br>
+            <input type="submit" value="Close Account" class="submit-button" style="background:#c31835;color:#fff;">
+        </form>
+    </section>
+    <section id="PerData" class="content-section">
+        <h2>Personal Data</h2>
+        <p>You can request a copy of your personal data or manage your privacy settings here.</p>
+        <form>
+            <button type="submit" class="submit-button">Request My Data</button>
+            <button type="button" class="submit-button">Manage Privacy Settings</button>
+        </form>
+    </section>
 </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 UEvents. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="PTS.html">Privacy & Terms</a>
+        <a href="contact.html">Contact</a>
+        <a href="FAQ.html">FAQs</a>
+      </div>
+    </div>
+  </footer>
+<script>
+// filepath: d:\Microsof VS Code\HTML learning\HTMl\midterm\event brite inpsired\html\accounts.html
+document.querySelectorAll('.sidebar a').forEach(link => {
+  link.addEventListener('click', function() {
+    document.querySelectorAll('.sidebar a').forEach(a => a.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
+</script>
 </body>
 </html>

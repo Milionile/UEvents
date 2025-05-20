@@ -165,6 +165,43 @@
 
 }
 
+footer {
+    background-color: #1e1e1e;
+    color: #eee;
+    padding: 10px;
+    text-align: center;
+    height: fit-content;
+}
+
+.footer-links {
+    margin-top: 10px;
+}
+
+.footer-links a {
+    color: #ccc;
+    margin: 0 10px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.modal-content input[type=text],
+.modal-content input[type=email],
+.modal-content input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f9f9f9;
+  font-size: 14px;
+  border-radius: 5px;
+  display: inline-block;
+}
+
 .container button{
     margin-top: 20px;
     padding: 10px 20px;

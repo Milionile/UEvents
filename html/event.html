@@ -103,9 +103,25 @@
     </div>
   </div>
   </main>
-  <footer>
-    <!-- Your footer here -->
-  </footer>
+
+  <!-- Modals for purchase confirmation and thank you -->
+  <div id="confirmModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <h2>Confirm Purchase</h2>
+      <p>Are you sure you want to buy <span id="modal-ticket-count"></span> ticket(s) for <b id="modal-event-title"></b>?</p>
+      <p>Total: <b id="modal-total"></b></p>
+      <button id="confirmPurchaseBtn" class="submit-button">Yes, Buy Ticket</button>
+      <button onclick="closeModal('confirmModal')" class="reset-button">Cancel</button>
+    </div>
+  </div>
+  <div id="thankYouModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <h2>Thank You!</h2>
+      <p>Your ticket purchase was successful.</p>
+      <button onclick="closeModal('thankYouModal')" class="submit-button">Close</button>
+    </div>
+  </div>
+
   <script src="../js/event.js"></script>
 </body>
 </html>

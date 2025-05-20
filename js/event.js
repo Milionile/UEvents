@@ -173,16 +173,15 @@ const events = [
   location: "YouTube Theater, Los Angeles, USA"
 },
 
-
   {
     id: "21",
-    title: "Manila Night Bash",
-    image: "../Pictures/nightlife1.jpg",
-    description: "Dance the night away with top DJs and a vibrant crowd.",
-    price: 1000,
-    organizer: "PartyLife PH",
-    date: "2025-06-10",
-    location: "Manila, Philippines",
+    title: "A Night Out in Manila",
+    image: "../Pictures/nightlife.avif",
+    description: "City life can be lonely, especially when you’re surrounded by so many people. Take the opportunity to meet others hoping for new connections",
+    price: 700,
+    organizer: "Ermantourage Europe & US",
+    date: "2025-05-23",
+    location: "Blackbird Makati",
     category: "Nightlife"
   },
   {
@@ -285,3 +284,67 @@ window.updateCount = function(change) {
       `+₱${(event.price * value * 0.05).toFixed(2)} Fee`;
   }
 };
+
+document.addEventListener('DOMContentLoaded', function() {
+  const checkoutBtn = document.getElementById('checkout-btn');
+  const ticketCountInput = document.getElementById('ticketCount');
+  const eventTitle = document.getElementById('event-title');
+
+  // Helper to get price from loaded event
+  function getEventPrice() {
+    return window.event ? window.event.price : 0;
+  }
+
+  // Format all money displays with commas
+  function updateMoneyDisplays() {
+    const price = getEventPrice();
+    const count = parseInt(ticketCountInput.value, 10) || 1;
+    document.getElementById('ticket-price').textContent = formatCurrency(price);
+    document.getElementById('ticket-fee').textContent = '+ ' + formatCurrency(price * count * 0.05) + ' Fee';
+    checkoutBtn.textContent = 'Check out for ' + formatCurrency(price * count * 1.05);
+  }
+  updateMoneyDisplays();
+
+  // When ticket count changes, update money displays
+  window.updateCount = function(change) {
+    let value = parseInt(ticketCountInput.value);
+    value = Math.max(1, value + change);
+    ticketCountInput.value = value;
+    updateMoneyDisplays();
+  };
+
+  // Modal logic
+  function openModal(id) {
+    document.getElementById(id).style.display = 'flex';
+  }
+  window.closeModal = function(id) {
+    document.getElementById(id).style.display = 'none';
+  }
+
+  // Checkout button logic
+  if (checkoutBtn) {
+    checkoutBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      const count = parseInt(ticketCountInput.value, 10) || 1;
+      const price = getEventPrice();
+      document.getElementById('modal-ticket-count').textContent = count;
+      document.getElementById('modal-event-title').textContent = eventTitle.textContent;
+      document.getElementById('modal-total').textContent = formatCurrency(price * count * 1.05);
+      openModal('confirmModal');
+    });
+  }
+
+  // Confirm purchase logic
+  const confirmBtn = document.getElementById('confirmPurchaseBtn');
+  if (confirmBtn) {
+    confirmBtn.onclick = function() {
+      closeModal('confirmModal');
+      setTimeout(() => openModal('thankYouModal'), 300);
+    };
+  }
+});
+
+// Format currency with commas
+function formatCurrency(amount) {
+  return '₱' + amount.toLocaleString('en-US', {minimumFractionDigits: 2});
+}

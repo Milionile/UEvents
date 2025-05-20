@@ -2,13 +2,13 @@ const events = [
 
   {
     id: "21",
-    title: "Manila Night Bash",
-    image: "../Pictures/nightlife1.jpg",
-    description: "Dance the night away with top DJs and a vibrant crowd.",
-    price: 1000,
-    organizer: "PartyLife PH",
-    date: "2025-06-10",
-    location: "Manila, Philippines",
+    title: "A Night Out in Manila",
+    image: "../Pictures/nightlife.avif",
+    description: "City life can be lonely, especially when you’re surrounded by so many people. Take the opportunity to meet others hoping for new connections",
+    price: 700,
+    organizer: "Ermantourage Europe & US",
+    date: "2025-05-23",
+    location: "Blackbird Makati",
     category: "Nightlife"
   },
   {

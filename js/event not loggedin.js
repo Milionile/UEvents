@@ -1,5 +1,4 @@
 // Example event data
-
 const events = [
   {
     id: "1",
@@ -173,83 +172,6 @@ const events = [
   location: "YouTube Theater, Los Angeles, USA"
 },
 
-  {
-    id: "21",
-    title: "A Night Out in Manila",
-    image: "../Pictures/nightlife.avif",
-    description: "City life can be lonely, especially when you’re surrounded by so many people. Take the opportunity to meet others hoping for new connections",
-    price: 700,
-    organizer: "Ermantourage Europe & US",
-    date: "2025-05-23",
-    location: "Blackbird Makati",
-    category: "Nightlife"
-  },
-  {
-    id: "31",
-    title: "Broadway in Manila",
-    image: "../Pictures/performing-arts1.jpg",
-    description: "A night of world-class musical performances.",
-    price: 2500,
-    organizer: "StageWorks",
-    date: "2025-07-01",
-    location: "Cultural Center of the Philippines",
-    category: "Performing & Visual Arts"
-  },
-  {
-    id: "41",
-    title: "Christmas Market Festival",
-    image: "../Pictures/holidays1.jpg",
-    description: "Celebrate the holidays with food, music, and gifts.",
-    price: 0,
-    organizer: "Holiday Events PH",
-    date: "2025-12-15",
-    location: "Bonifacio High Street",
-    category: "Holidays"
-  },
-  {
-    id: "51",
-    title: "Singles Mixer Night",
-    image: "../Pictures/dating1.jpg",
-    description: "Meet new people and maybe find your match!",
-    price: 500,
-    organizer: "LoveConnect",
-    date: "2025-06-20",
-    location: "Makati, Philippines",
-    category: "Dating"
-  },
-  {
-    id: "61",
-    title: "DIY Crafting Workshop",
-    image: "../Pictures/hobbies1.jpg",
-    description: "Unleash your creativity with hands-on crafting.",
-    price: 300,
-    organizer: "CraftyHands",
-    date: "2025-07-10",
-    location: "Quezon City",
-    category: "Hobbies"
-  },
-  {
-    id: "71",
-    title: "Startup Summit 2025",
-    image: "../Pictures/business1.jpg",
-    description: "Where innovation meets opportunity. Meet top tech founders.",
-    price: 1200,
-    organizer: "InnovateNow PH",
-    date: "2025-09-05",
-    location: "Cebu, Philippines",
-    category: "Business"
-  },
-  {
-    id: "81",
-    title: "Food & Drink Expo",
-    image: "../Pictures/food1.jpg",
-    description: "Taste the best food and drinks from around the world.",
-    price: 200,
-    organizer: "Foodies United",
-    date: "2025-08-15",
-    location: "SMX Convention Center",
-    category: "Food & Drink"
-  },
 
 ];
 
@@ -285,66 +207,65 @@ window.updateCount = function(change) {
   }
 };
 
-document.addEventListener('DOMContentLoaded', function() {
-  const checkoutBtn = document.getElementById('checkout-btn');
-  const ticketCountInput = document.getElementById('ticketCount');
-  const eventTitle = document.getElementById('event-title');
 
-  // Helper to get price from loaded event
-  function getEventPrice() {
-    return window.event ? window.event.price : 0;
-  }
-
-  // Format all money displays with commas
-  function updateMoneyDisplays() {
-    const price = getEventPrice();
-    const count = parseInt(ticketCountInput.value, 10) || 1;
-    document.getElementById('ticket-price').textContent = formatCurrency(price);
-    document.getElementById('ticket-fee').textContent = '+ ' + formatCurrency(price * count * 0.05) + ' Fee';
-    checkoutBtn.textContent = 'Check out for ' + formatCurrency(price * count * 1.05);
-  }
-  updateMoneyDisplays();
-
-  // When ticket count changes, update money displays
-  window.updateCount = function(change) {
-    let value = parseInt(ticketCountInput.value);
-    value = Math.max(1, value + change);
-    ticketCountInput.value = value;
-    updateMoneyDisplays();
-  };
-
-  // Modal logic
-  function openModal(id) {
-    document.getElementById(id).style.display = 'flex';
-  }
-  window.closeModal = function(id) {
-    document.getElementById(id).style.display = 'none';
-  }
-
-  // Checkout button logic
-  if (checkoutBtn) {
-    checkoutBtn.addEventListener('click', function(e) {
+    // Open modal
+    openBtn.addEventListener("click", (e) => {
       e.preventDefault();
-      const count = parseInt(ticketCountInput.value, 10) || 1;
-      const price = getEventPrice();
-      document.getElementById('modal-ticket-count').textContent = count;
-      document.getElementById('modal-event-title').textContent = eventTitle.textContent;
-      document.getElementById('modal-total').textContent = formatCurrency(price * count * 1.05);
-      openModal('confirmModal');
+      modal.style.display = "block";
     });
+
+    // Close with 'X'
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    // Close with 'Cancel'
+    cancelBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    // Close if clicking outside the modal content
+    window.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  
+
+  // Setup for both Login and Signup modals
+  setupModal("loginModal", "openLogin", "closeLogin");
+  setupModal("signupModal", "openSignup", "closeSignup");
+
+  document.getElementById('signupForm').onsubmit = function(e) {
+  e.preventDefault();
+  const name = this['signup-name'].value;
+  const email = this['signup-email'].value;
+  const password = this['signup-psw'].value;
+  const confirm = this['signup-psw-repeat'].value;
+
+  if(password !== confirm) {
+    alert('Passwords do not match!');
+    return;
   }
 
-  // Confirm purchase logic
-  const confirmBtn = document.getElementById('confirmPurchaseBtn');
-  if (confirmBtn) {
-    confirmBtn.onclick = function() {
-      closeModal('confirmModal');
-      setTimeout(() => openModal('thankYouModal'), 300);
-    };
-  }
-});
+  // Save user info to localStorage (for demo only)
+  localStorage.setItem('user', JSON.stringify({ name, email, password }));
+  alert('Sign up successful! You can now log in.');
+  this.reset();
+  document.getElementById('signupModal').style.display = 'none';
+};
 
-// Format currency with commas
-function formatCurrency(amount) {
-  return '₱' + amount.toLocaleString('en-US', {minimumFractionDigits: 2});
-}
+document.getElementById('loginForm').onsubmit = function(e) {
+  e.preventDefault();
+  const email = this['login-email'].value;
+  const password = this['login-psw'].value;
+  const user = JSON.parse(localStorage.getItem('user') || '{}');
+
+  if(user.email === email && user.password === password) {
+    alert('Login successful! Welcome, ' + user.name);
+    // You can redirect or update UI here
+    window.location.href = 'html/indexlogedin.html';
+  } else {
+    alert('Invalid email or password!');
+  }
+};

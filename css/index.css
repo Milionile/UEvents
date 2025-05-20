@@ -3,6 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
 }
 a{
     text-decoration: none;
@@ -596,4 +597,143 @@ hr {
   .dropdown-wrapper:hover .dropdown-menu {
     display: block;
   }
-  
+/* Add or update these at the end of your index.css file */
+
+/* Responsive Navbar and Menu */
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 8px;
+  }
+  .menu {
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .search-container {
+    margin: 10px 0;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Responsive Categories */
+@media (max-width: 700px) {
+  .categories-container {
+    gap: 16px;
+    padding: 10px 0;
+  }
+  .category-item {
+    width: 70px;
+  }
+  .category-item img {
+    width: 120%;
+    height: 120%;
+  }
+}
+
+/* Responsive Event Cards */
+@media (max-width: 900px) {
+  .event-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .event-card {
+    width: 95vw;
+    min-width: unset;
+    max-width: 400px;
+  }
+}
+
+/* Responsive Slider */
+@media (max-width: 700px) {
+  .slider-container {
+    width: 100vw;
+    max-width: 100vw;
+    border-radius: 0;
+  }
+  .slide img {
+    height: 200px;
+  }
+}
+
+/* Responsive Newsletter */
+@media (max-width: 700px) {
+  .newsletter form {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .newsletter input[type="email"] {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* Responsive Footer */
+@media (max-width: 700px) {
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+  }
+}
+
+/* Responsive Modal */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 98vw;
+    max-width: 98vw;
+    padding: 0 8px;
+  }
+}
+
+/* Responsive Container */
+@media (max-width: 700px) {
+  .container {
+    padding: 8px;
+  }
+  .container h1 {
+    font-size: 2rem;
+  }
+  .container p {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive Breadcrumb */
+@media (max-width: 600px) {
+  .breadcrumb {
+    font-size: 0.85rem;
+    padding: 6px 0;
+  }
+}
+
+/* Responsive Dropdown Menu */
+@media (max-width: 600px) {
+  .dropdown-menu {
+    min-width: 120px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Responsive Profile */
+@media (max-width: 600px) {
+  .profile {
+    gap: 4px;
+  }
+  .profile-icon {
+    width: 22px;
+    height: 22px;
+    font-size: 13px;
+  }
+}
+
+/* General: Make sure nothing overflows */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}

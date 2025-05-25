@@ -32,12 +32,6 @@ body {
     color: #c31835;
 }
 
-.menu-separator {
-  height: 1px;
-  background-color: #e6e6e6;
-  margin: 6px 0;
-}
-
 /* Search Container */
 .search-container {
     display: flex;
@@ -411,9 +405,9 @@ body {
 footer {
     background-color: #1e1e1e;
     color: #eee;
-    padding: 20px 0;
+    padding: 10px;
     text-align: center;
-    margin-top: 50px;
+    height: fit-content;
 }
 
 .footer-links {
@@ -1001,4 +995,101 @@ hr {
 html, body {
   max-width: 100vw;
   overflow-x: hidden;
+}/* Simple modal styles */
+.modal {
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.4);
+  display: flex; align-items: center; justify-content: center;
+}
+.modal-content {
+  background: #fff;
+  padding: 32px 24px;
+  border-radius: 12px;
+  min-width: 320px;
+  text-align: center;
+}
+.submit-button, .reset-button {
+  margin: 12px 8px 0 8px;
+  padding: 8px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.submit-button { background: #c31835; color: #fff; }
+.reset-button { background: #eee; color: #333; }
+/* Picker containers */
+#day-picker,
+#seat-type-picker,
+#seat-picker {
+  margin-bottom: 14px;
+  text-align: left;
+}
+
+/* Picker labels */
+#day-picker label,
+#seat-type-picker label,
+#seat-picker label {
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 4px;
+  display: block;
+  font-size: 1.05em;
+}
+
+/* Picker selects */
+#event-day,
+#seat-type {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  background: #f9f9f9;
+  font-size: 1em;
+  margin-top: 4px;
+  margin-bottom: 2px;
+  color: #333;
+  transition: border-color 0.2s;
+}
+
+#event-day:focus,
+#seat-type:focus {
+  border-color: #c31835;
+  outline: none;
+}
+
+/* Seat map buttons (already styled, but let's enhance) */
+#seat-map button {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  border: 1.5px solid #ccc;
+  background: #f9f9f9;
+  cursor: pointer;
+  margin: 2px;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+#seat-map button.selected {
+  background: #c31835;
+  color: #fff;
+  border-color: #c31835;
+}
+
+#seat-map button.occupied {
+  background: #bbb;
+  color: #fff;
+  cursor: not-allowed;
+  border-color: #bbb;
+}
+
+/* Selected seat text */
+#selected-seat {
+  margin-top: 8px;
+  font-size: 1em;
+  color: #3659e3;
+  font-weight: bold;
 }

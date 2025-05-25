@@ -65,6 +65,7 @@
         
     </nav>
   </header>
+ 
   <main>
   <div class="event-layout">
     <div class="event-left">
@@ -85,8 +86,26 @@
     <div class="event-right">
       <div class="ticket-box">
         <div class="ticket-type">
-          <span>General Admission</span>
+          <span id="ticket-type-label">General Admission</span>
           <span class="ticket-price" id="ticket-price"></span>
+        </div>
+        <div class="ticket-options">
+          <!-- Day Picker (shown if event has multiple days) -->
+          <div id="day-picker" style="margin-bottom: 12px; display: none;">
+            <label for="event-day"><b>Choose Day:</b></label>
+            <select id="event-day"></select>
+          </div>
+          <!-- Seat Type Picker (shown if applicable) -->
+          <div id="seat-type-picker" style="margin-bottom: 12px; display: none;">
+            <label for="seat-type"><b>Seat Type:</b></label>
+            <select id="seat-type"></select>
+          </div>
+          <!-- Seat Picker (shown if applicable) -->
+          <div id="seat-picker" style="margin-bottom: 12px; display: none;">
+            <label><b>Pick Your Seat:</b></label>
+            <div id="seat-map" style="display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px;"></div>
+            <div id="selected-seat" style="margin-top: 6px; font-size: 0.95em; color: #3659e3;"></div>
+          </div>
         </div>
         <div class="ticket-controls">
           <button onclick="updateCount(-1)">−</button>
